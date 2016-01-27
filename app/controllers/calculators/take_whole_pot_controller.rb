@@ -1,4 +1,4 @@
-class TakeWholePotCalculatorController < ApplicationController
+class Calculators::TakeWholePotController < ApplicationController
   layout 'guides'
 
   def show
