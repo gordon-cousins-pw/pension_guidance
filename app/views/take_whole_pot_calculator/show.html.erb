@@ -5,8 +5,8 @@
 <h1>Taking your whole pot in one go</h1>
 
 <div class="calculator">
-  <%= render 'form' %>
-  <%= render 'results' %>
+  <%= render 'form', calculator: calculator, pot: @pot, income: @income %>
+  <%= render 'results', calculator: @calculator, result: @result %>
 </div>
 
 <a class="link-back" href="/take-whole-pot">Back to description</a>
