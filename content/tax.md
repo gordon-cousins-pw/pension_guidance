@@ -171,6 +171,4 @@ If your total income (including money from pensions and PAYE) is £100,000 or mo
 
 You’re responsible for paying tax on other income you have, eg from property or investments, and you might have to fill in a Self-Assessment tax return.
 
-## Pension recycling
-
-You need to be aware of ‘pension recycling’ tax laws if you plan to cash in one pot and pay into another. Get [financial advice](/financial-advice) if you’re thinking of doing this.
+^You need to be aware of ‘pension recycling’ tax laws if you plan to take tax-free lump sums from your pot and pay into the same or another pot. Get [financial advice](/financial-advice) if you’re thinking of doing this.^
