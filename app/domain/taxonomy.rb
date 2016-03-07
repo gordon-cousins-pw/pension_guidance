@@ -36,6 +36,7 @@ class Taxonomy
   def taking_your_pension_money
     category_node('taking-your-pension-money').tap do |node|
       node << guide_node('making-money-last')
+      node << guide_node('combine-pots')
       node << guide_node('work-out-income')
       node << guide_node('your-pension-before-55')
       node << guide_node('scams')
