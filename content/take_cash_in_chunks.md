@@ -20,8 +20,6 @@ Not all providers offer this option. If your current provider doesn’t offer it
 
 %Taking a large sum of cash from your pot can mean you pay a higher amount of tax.%
 
-{::calculator id="take-cash-in-chunks" /}
-
 ## Tax
 
 You pay tax when you take money from your pot because you get tax relief when you pay into your pension.
@@ -42,6 +40,8 @@ You may pay emergency tax when you take money from your pot which you can claim 
 
 If your provider doesn’t pay your emergency tax back automatically, you can claim it back from
 HM Revenue and Customs.
+
+{::calculator id="take-cash-in-chunks" /}
 
 ## Benefits
 
