@@ -120,6 +120,7 @@ This table gives an overview of how much tax you may pay on the money you take f
 ## Other tax you could pay
 
 You could also pay Income Tax on:
+
 - your State Pension
 - earnings from employment or self employment
 - any other income, eg money from rental income, savings, investments
