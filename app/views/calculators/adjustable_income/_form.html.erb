@@ -14,11 +14,9 @@
              label: 'How much is in your pot?',
              error_messages: errors&.get(:pot) %>
 
-  <%= render 'calculators/form_input_currency',
+  <%= render 'calculators/form_input_hidden',
              field: :desired_monthly_income,
-             value: form&.desired_monthly_income,
-             label: 'How much would you like your monthly income to be?',
-             error_messages: errors&.get(:desired_monthly_income) %>
+             value: form&.desired_monthly_income %>
 
   <%= render 'calculators/form_input_number',
              field: :age,
