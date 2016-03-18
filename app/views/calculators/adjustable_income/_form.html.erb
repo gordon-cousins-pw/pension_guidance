@@ -11,7 +11,7 @@
   <%= render 'calculators/form_input_currency',
              field: :pot,
              value: form&.pot,
-             label: 'How much is in your pot?',
+             label: 'Amount you’ll have in your pot',
              error_messages: errors&.get(:pot) %>
 
   <%= render 'calculators/form_input_hidden',
@@ -21,7 +21,7 @@
   <%= render 'calculators/form_input_number',
              field: :age,
              value: form&.age,
-             label: 'How old are you?',
+             label: 'Your age when you plan to retire',
              error_messages: errors&.get(:age) %>
 
   <%= render 'calculators/form_input_submit' %>
