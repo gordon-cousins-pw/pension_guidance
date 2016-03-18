@@ -56,15 +56,55 @@
       }, this));
     },
 
+    _updateEstimateOnly: function() {
+      this.submitForm().then($.proxy(function(data) {
+        var $empty = $('<div/>');
+        var $estimate = $empty.append(data).find('#js-estimate');
+        this._refresh($estimate, $('#js-estimate'));
+
+        this._scrollTo(this.$submitButton).then($.proxy(function() {
+          this._toggleLoading(false);
+        }, this));
+
+      }, this));
+    },
+
     _toggleLoading: function(isLoading) {
       this.$loadingStatus[isLoading ? 'addClass' : 'removeClass']('calculator__loading-status--loading');
     },
 
+    _sliders: function() {
+      if ($('#slider').length) {
+        var slider = new PWPG.Slider($('#slider'));
+        var $target = $($('#slider').attr('data-target'));
+        var buffer;
+
+        slider.$textInput.on('change', $.proxy(function() {
+          clearTimeout(buffer);
+
+          buffer = setTimeout($.proxy(function() {
+            $target.val(slider.$textInput.val());
+            this._updateEstimateOnly();
+          }, this), 200);
+
+        }, this));
+      }
+    },
+
     _scrollTo: function($el) {
       var offset = $el.offset() || {};
+      var target = offset.top || 0;
+      var $page = $('html, body');
+
+      $page.on('scroll mousedown wheel DOMMouseScroll mousewheel touchmove', function() {
+        $page.stop();
+      });
+
       return $('html, body').animate({
-        scrollTop: offset.top || 0
-      }, this.scrollSpeed).promise();
+        scrollTop: target
+      }, this.scrollSpeed).promise().then(function() {
+        $page.off('scroll mousedown wheel DOMMouseScroll mousewheel touchmove');
+      });
     }
   };
 
