@@ -17,6 +17,7 @@ class AdjustableIncomeCalculator
       tax_free_lump_sum: tax_free_lump_sum,
       taxable_portion: taxable_portion,
       growth_interest_rate: GROWTH_INTEREST_RATE * 100,
+      monthly_drawdown_amount: (normalised_drawdown_amount / 12).to_i,
       desired_income_with_pot_growth_lasts_until: desired_income_with_pot_growth_lasts_until.to_i,
       monthly_income_until_life_expectancy: monthly_income_until_life_expectancy.to_i,
       life_expectancy: LIFE_EXPECTANCY
@@ -24,6 +25,10 @@ class AdjustableIncomeCalculator
   end
 
   private
+
+  def normalised_drawdown_amount
+    (desired_income > 0) ? desired_income : income_until_life_expectancy
+  end
 
   def tax_free_lump_sum
     pot * TAX_FREE_POT_PORTION
@@ -33,17 +38,17 @@ class AdjustableIncomeCalculator
     pot - tax_free_lump_sum
   end
 
-  def years_pot_will_last_for(desired_income, pot)
-    (pot / desired_income).floor
+  def years_pot_will_last_for(yearly_drawdown, pot)
+    (pot / yearly_drawdown).floor
   end
 
-  def desired_income_with_pot_growth_lasts_until(yearly_withdrawal = desired_income)
+  def desired_income_with_pot_growth_lasts_until(yearly_drawdown = normalised_drawdown_amount)
     pot_remaining = taxable_portion
     years_lasted = 0
 
     while pot_remaining > 0
       pot_remaining *= (GROWTH_INTEREST_RATE + 1)
-      pot_remaining -= yearly_withdrawal
+      pot_remaining -= yearly_drawdown
 
       years_lasted += 1 if pot_remaining > 0
 
@@ -54,13 +59,15 @@ class AdjustableIncomeCalculator
   end
 
   def taxable_portion_with_growth
-    years_pot_will_last_without_growth = years_pot_will_last_for(desired_income, taxable_portion)
+    years_pot_will_last_without_growth = years_pot_will_last_for(normalised_drawdown_amount, taxable_portion)
 
-    amount_with_growth(taxable_portion, years_pot_will_last_without_growth, desired_income)
+    amount_with_growth(taxable_portion, years_pot_will_last_without_growth, normalised_drawdown_amount)
   end
 
   def income_until_life_expectancy
     yearly_withdrawal_until_death = desired_income
+
+    yearly_withdrawal_until_death = pot if yearly_withdrawal_until_death <= 0
 
     while desired_income_with_pot_growth_lasts_until(yearly_withdrawal_until_death) < LIFE_EXPECTANCY
       yearly_withdrawal_until_death -= 10
@@ -79,11 +86,11 @@ class AdjustableIncomeCalculator
     LIFE_EXPECTANCY - age
   end
 
-  def amount_with_growth(amount, years, yearly_withdrawal)
+  def amount_with_growth(amount, years, yearly_drawdown)
     amount_before_growth = amount
 
     1.upto(years) do
-      amount -= yearly_withdrawal
+      amount -= yearly_drawdown
       amount *= (GROWTH_INTEREST_RATE + 1)
     end
 

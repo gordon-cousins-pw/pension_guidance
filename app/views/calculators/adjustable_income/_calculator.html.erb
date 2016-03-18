@@ -1,2 +1,2 @@
 <%= render 'form', form: form %>
-<%= render 'estimate', estimate: form.estimate, pot: form.pot, desired_monthly_income: form.desired_monthly_income if form.valid? %>
+<%= render 'estimate', estimate: form.estimate, pot: form.pot, monthly_drawdown_amount: form.estimate[:monthly_drawdown_amount] if form.valid? %>

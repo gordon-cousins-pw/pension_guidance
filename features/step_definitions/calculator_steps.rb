@@ -30,13 +30,18 @@ When(/^I input the total value of my pension pot, my income for the year and how
   calculator.calculate_button.click
 end
 
-When(/^I input the total value of my pension pot, my desired monthly income and my age$/) do
+When(/^I input the total value of my pension pot and my age$/) do
   calculator = @page.calculator
 
   calculator.pot_field.set('100,000.00')
-  calculator.desired_income_field.set('500')
   calculator.age_field.set('55')
   calculator.calculate_button.click
+end
+
+And(/^I change the income to another amount$/) do
+  calculator = @page.calculator
+
+  calculator.slider_input.set('500')
 end
 
 Then(/^the calculator is displayed$/) do
@@ -66,7 +71,11 @@ And(/^I should see how the remaining value of my pot$/) do
   expect(@page.calculator.pot_remaining).to have_content('£37,000')
 end
 
-Then(/^I should see what age I will be when my desired monthly income runs out$/) do
+Then(/^I should see an income that will last until my life expectancy$/) do
+  expect(@page.calculator.desired_income_lasts_until).to have_content('84')
+end
+
+Then(/^it shows me what age my desired income will last until$/) do
   expect(@page.calculator.desired_income_lasts_until).to have_content('70')
 end
 
