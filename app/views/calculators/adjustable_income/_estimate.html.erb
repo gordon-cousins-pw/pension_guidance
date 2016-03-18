@@ -1,16 +1,32 @@
+<div id="js-estimate">
+  <p>
+    Based on what you’ve told us, if you use your <%= number_to_currency(pot) %> pension pot to take an adjustable income, you could get:
+
+    <strong class="calculator__estimate__number t-calculator-tax-free-lump-sum">
+      <%= number_to_currency(estimate[:tax_free_lump_sum]) %> tax free
+    </strong>
+
+    and from the <span class="t-calculator-taxable-portion"><%= number_to_currency(estimate[:taxable_portion]) %></span> left over:
+
+    <strong class="calculator__estimate__number">
+      a monthly income of <span class="calculator__highlight"><%= number_to_currency(monthly_drawdown_amount) %></span>
+      would last<br>until you're <span class="t-calculator-age-for-desired-income calculator__highlight"><%= estimate[:desired_income_with_pot_growth_lasts_until] %></span>
+    </strong>
+  </p>
+</div>
+
 <p>
-  Based on what you’ve told us, if you use your <%= number_to_currency(pot) %> pension pot to take an adjustable income, you could get:
-
-  <strong class="calculator__estimate__number t-calculator-tax-free-lump-sum">
-    <%= number_to_currency(estimate[:tax_free_lump_sum]) %> tax free
-  </strong>
-
-  and from the <span class="t-calculator-taxable-portion"><%= number_to_currency(estimate[:taxable_portion]) %></span> left over:
-
-  <strong class="calculator__estimate__number">
-    your monthly income of <%= number_to_currency(desired_monthly_income) %>
-    would last until you're <span class="t-calculator-age-for-desired-income"><%= estimate[:desired_income_with_pot_growth_lasts_until] %></span>
-  </strong>
+  <label for="slider">or try with a different monthly income:</label>
+  <%= render 'components/slider', {
+      id: 'slider',
+      target: '#desired_monthly_income',
+      option: 'adjustable-income',
+      text_before: '£',
+      initial_value: monthly_drawdown_amount,
+      min: 50,
+      max: monthly_drawdown_amount.to_f * 5,
+      step: 5
+  } %>
 </p>
 
 <ul class="t-calculator-notes">
