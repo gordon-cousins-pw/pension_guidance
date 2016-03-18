@@ -1,0 +1,8 @@
+.highlight {
+  animation: highlight .8s ease-in-out 1;
+}
+
+@keyframes highlight {
+  0% {background: $highlight-color;}
+  100% {background: none;}
+}
