@@ -9,14 +9,18 @@
     and from the <span class="t-calculator-taxable-portion"><%= number_to_currency(estimate[:taxable_portion]) %></span> left over:
 
     <strong class="calculator__estimate__number">
-      a monthly income of <%= number_to_currency(monthly_drawdown_amount) %>
-      would last<br>until you're <span class="t-calculator-age-for-desired-income"><%= estimate[:desired_income_with_pot_growth_lasts_until] %></span>
+      a monthly income of <span class="calculator__highlight"><%= number_to_currency(monthly_drawdown_amount) %></span>
+      would last<br>until you're <span class="t-calculator-age-for-desired-income calculator__highlight"><%= estimate[:desired_income_with_pot_growth_lasts_until] %></span>
     </strong>
   </p>
 </div>
 
 <p>
+<<<<<<< HEAD
   <label for="slider">Try with another income</label>
+=======
+  <label for="slider">or try with a different monthly income:</label>
+>>>>>>> calculators/adjustable-income
   <%= render 'components/slider', {
       id: 'slider',
       target: '#desired_monthly_income',
