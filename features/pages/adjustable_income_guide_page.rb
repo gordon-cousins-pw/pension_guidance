@@ -6,8 +6,8 @@ module Pages
 
     section :calculator, '.t-calculator' do
       element :pot_field, '.t-calculator-pot'
-      element :desired_income_field, '.t-calculator-desired_monthly_income'
       element :age_field, '.t-calculator-age'
+      element :slider_input, '.t-slider-input'
       element :calculate_button, '.t-calculator-submit'
 
       element :notes, '.t-calculator-notes'

@@ -9,7 +9,6 @@ module Calculators
     validates :pot, presence: true, numericality: { allow_blank: true, greater_than: 0 }
     validates :age, numericality: { allow_blank: true, greater_than_or_equal_to: 55 }
     validates :desired_monthly_income,
-              presence: true,
               numericality: { allow_blank: true, greater_than: 0,
                               less_than: -> (form) { form.errors.include?(:pot) ? Float::INFINITY : form.pot.to_f } }
 
