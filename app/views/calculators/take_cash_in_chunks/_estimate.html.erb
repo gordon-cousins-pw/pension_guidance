@@ -4,13 +4,13 @@
     <span class="t-calculator-pot"><%= number_to_currency(estimate.pot) %></span> pot, you could pay:
 
     <strong class="calculator__estimate__number t-calculator-chunk-tax">
-      <%= number_to_currency(estimate.chunk_tax) %> in tax
+      <span class="calculator__highlight"><%= number_to_currency(estimate.chunk_tax) %></span> in tax
     </strong>
 
     and get:
 
     <strong class="calculator__estimate__number t-calculator-chunk-remaining">
-      <%= number_to_currency(estimate.chunk_remaining) %>
+      <span class="calculator__highlight"><%= number_to_currency(estimate.chunk_remaining) %></span>
     </strong>
 
     leaving:
