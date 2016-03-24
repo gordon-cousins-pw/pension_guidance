@@ -7,20 +7,22 @@
       <span class="calculator__highlight"><%= number_to_currency(estimate.chunk_remaining) %></span>
     </strong>
 
-    and pay:
+    <p>(This includes your tax free lump sum)</p>
+
+    <p>We estimate you'll pay:</p>
 
     <strong class="calculator__estimate__number t-calculator-chunk-tax">
       <span class="calculator__highlight"><%= number_to_currency(estimate.chunk_tax) %></span> in tax
     </strong>
-
-    <span class="t-calculator-pot-remaining">
-      leaving <%= number_to_currency(estimate.pot_remaining) %> in your pot
-    </span>
   </p>
 </div>
 
 <p>
-  <strong><label for="slider">or try taking a different cash chunk:</label></strong>
+  <label for="slider">or try taking a different cash chunk:</label>
+  <%
+  max = estimate.chunk.to_f * 5
+  max = (estimate.pot - 1) if max > estimate.pot
+  %>
   <%= render 'components/slider', {
       id: 'slider',
       target: '#chunk',
@@ -28,12 +30,13 @@
       text_before: '£',
       initial_value: estimate.chunk.to_i,
       min: 0,
-      max: estimate.chunk.to_f * 5,
+      max: max,
       step: 5
   } %>
 </p>
 
 <ul>
+  <li>You pay tax because your cash chunk is added to your income.</li>
   <li>
     This is an estimate — the exact amount of tax you pay depends on your total income for the year and your tax rate.
   </li>
