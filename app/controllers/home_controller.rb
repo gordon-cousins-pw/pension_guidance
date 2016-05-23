@@ -1,5 +1,5 @@
 class HomeController < ApplicationController
-  layout 'full_width'
+  layout 'homepage'
 
   def show
     expires_in Rails.application.config.cache_max_age, public: true
