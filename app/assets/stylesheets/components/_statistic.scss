@@ -1,0 +1,19 @@
+.statistic {
+  @include media(tablet) {
+    max-width: 66%;
+  }
+}
+
+.statistic--right {
+  text-align: right;
+  float: right;
+}
+
+.statistic__label {
+  @extend .heading-small;
+}
+
+.statistic__number {
+  @extend .heading-xlarge;
+  margin-top: 0;
+}

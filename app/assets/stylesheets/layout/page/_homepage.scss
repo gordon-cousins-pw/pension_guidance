@@ -9,6 +9,34 @@
   }
 }
 
+.l-home-options__option {
+  text-align: center;
+}
+
+.l-home-options__circle {
+  margin: 0 auto;
+}
+
+.l-home-options__link {
+  display: block;
+  padding-top: 16px;
+}
+
+.l-home-row {
+  h2 {
+    margin-top: 0;
+  }
+
+  @include media(desktop) {
+    padding-top: 28px;
+    padding-bottom: 14px;
+  }
+}
+
+.l-home-row--accent {
+  background: $home-row-accent-background;
+}
+
 .l-quick-links {
   display: none;
 
