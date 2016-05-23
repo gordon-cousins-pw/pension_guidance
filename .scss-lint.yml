@@ -99,9 +99,7 @@ linters:
     max_depth: 4
 
   PlaceholderInExtend:
-    enabled: true
-    exclude: # extending govuk_elements typography in base typography
-      - app/assets/stylesheets/base/_headings.scss
+    enabled: false
 
   PropertySortOrder:
     enabled: false
