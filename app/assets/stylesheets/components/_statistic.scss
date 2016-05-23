@@ -1,4 +1,6 @@
 .statistic {
+  padding-bottom: 2em;
+
   @include media(tablet) {
     max-width: 66%;
   }
@@ -11,9 +13,10 @@
 
 .statistic__label {
   @extend .heading-small;
+  margin-top: 0;
 }
 
 .statistic__number {
   @extend .heading-xlarge;
-  margin-top: 0;
+  margin-bottom: 0;
 }
