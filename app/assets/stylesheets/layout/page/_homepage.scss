@@ -60,10 +60,8 @@
     margin-top: 0;
   }
 
-  @include media(desktop) {
-    padding-top: 28px;
-    padding-bottom: 14px;
-  }
+  padding-top: 28px;
+  padding-bottom: 14px;
 }
 
 .l-home-row--accent {
@@ -87,8 +85,13 @@
 }
 
 .l-home-piggy-bank {
-  position: absolute;
-  top: -42px;
+  display: none;
+
+  @include media(tablet) {
+    display: block;
+    position: absolute;
+    top: -42px;
+  }
 }
 
 .l-quick-links {
