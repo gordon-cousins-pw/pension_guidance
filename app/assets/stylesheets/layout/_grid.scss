@@ -18,6 +18,10 @@
   @include grid-column(2/3);
 }
 
+.l-column-one-fifth {
+  @include grid-column(1/5);
+}
+
 
 .l-grid-row--main {
   margin-top: 4px; // align h1s with gov.uk
