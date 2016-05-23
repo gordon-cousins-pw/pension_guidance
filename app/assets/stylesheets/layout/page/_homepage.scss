@@ -13,7 +13,12 @@
   @extend .heading-large;
 }
 
-.l-home-options__circle {
+.l-home {
+  padding-bottom: 3em;
+
+  .l-page-container {
+    padding-bottom: 0;
+  }
 }
 
 .l-home-options__link {
@@ -48,9 +53,9 @@
   background: transparentize($color-option-take-whole-pot, .9);
 }
 
-
-
 .l-home-row {
+  margin-top: 2em;
+
   h2 {
     margin-top: 0;
   }
@@ -65,11 +70,25 @@
   @extend %outdent-to-full-width;
   background: $home-row-accent-background;
   color: $color-white;
+
+  a:link,
+  a:visited {
+    color: $color-white;
+  }
 }
 
 .l-home-row--callout {
   @extend %outdent-to-full-width;
   background: $home-row-callout-background;
+}
+
+.l-home-intro-container {
+  position: relative;
+}
+
+.l-home-piggy-bank {
+  position: absolute;
+  top: -42px;
 }
 
 .l-quick-links {
