@@ -9,18 +9,46 @@
   }
 }
 
-.l-home-options__option {
-  text-align: center;
+.l-home-single-column-heading {
+  @extend .heading-large;
 }
 
 .l-home-options__circle {
-  margin: 0 auto;
 }
 
 .l-home-options__link {
-  display: block;
-  padding-top: 16px;
+  display: inline-block;
+  font-weight: bold;
+  position: relative;
+  margin-left: 33px;
+  top: -15px;
 }
+
+.l-home-options__option {
+  padding: 8px 14px;
+}
+
+.l-home-options__option--leave-pot-untouched {
+  background: transparentize($color-option-leave-pot-untouched, .9);
+}
+
+.l-home-options__option--guaranteed-income {
+  background: transparentize($color-option-guaranteed-income, .9);
+}
+
+.l-home-options__option--adjustable-income {
+  background: transparentize($color-option-adjustable-income, .8);
+}
+
+.l-home-options__option--take-cash-in-chunks {
+  background: transparentize($color-option-take-cash, .9);
+}
+
+.l-home-options__option--take-whole-pot {
+  background: transparentize($color-option-take-whole-pot, .9);
+}
+
+
 
 .l-home-row {
   h2 {
@@ -34,7 +62,14 @@
 }
 
 .l-home-row--accent {
+  @extend %outdent-to-full-width;
   background: $home-row-accent-background;
+  color: $color-white;
+}
+
+.l-home-row--callout {
+  @extend %outdent-to-full-width;
+  background: $home-row-callout-background;
 }
 
 .l-quick-links {
