@@ -71,3 +71,7 @@ Beware of [pension scams](/scams) contacting you unexpectedly about an investmen
 **Book a [free Pension Wise appointment](/appointments) to find out more about what you can do with your pot.**
 
 </div>
+
+{::delayed-popup delay="5"}
+Thought about booking a face-to-face appointment?
+{/delayed-popup}

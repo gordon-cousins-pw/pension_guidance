@@ -8,3 +8,8 @@ Govspeak::Document.extension('calculator', %r(^{::calculator\sid="(?<id>.*?)"\s/
 
   %(\n\n<div class="#{classes}">#{calculator}</div>\n)
 end
+
+Govspeak::Document.extension('delayed-popup', %r(^{::delayed-popup(\sdelay="(?<delay>[^"]*)")?}(?<content>.+){/delayed-popup})m) do |delay, content|
+  classes = "delayed-popup delayed-popup--bottom js-delayed-popup"
+  %(\n\n<div class="#{classes}" data-delay="#{delay}">#{content}</div>\n)
+end

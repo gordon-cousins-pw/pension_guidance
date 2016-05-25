@@ -1,7 +1,8 @@
 <% content_for(:page_title, t('service.title', page_title: @guide.title)) %>
 <% content_for(:meta_description, @guide.description) %>
 
-<%= render 'pager' if @guide.pager? %>
 <%= render 'option' if @guide.option? %>
 
 <%= @guide.content %>
+
+<%= render 'pager' if @guide.pager? %>
