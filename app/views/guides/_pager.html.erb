@@ -1,0 +1,30 @@
+<%
+  current_node = Taxonomy.instance.tree.detect { |node| node.name == @guide.id }
+  previous_sibling = current_node.previous_sibling
+  @previous_guide = previous_sibling && GuideDecorator.cached_for(GuideRepository.new.find(previous_sibling.name))
+  next_sibling = current_node.next_sibling
+  @next_guide = next_sibling && GuideDecorator.cached_for(GuideRepository.new.find(next_sibling.name))
+%>
+
+<ul class="pager">
+  <%- if @previous_guide %>
+    <li class="pager__item pager__item--previous">
+      <a href="<%= @previous_guide.url %>" rel="prev">
+        <span class="pager__label">Previous</span>
+        <span class="pager__title">
+          <%= @previous_guide.label %>
+        </span>
+      </a>
+    </li>
+  <% end %>
+  <%- if @next_guide %>
+    <li class="pager__item pager__item--next">
+      <a href="<%= @next_guide.url %>" rel="next">
+        <span class="pager__label">Next</span>
+        <span class="pager__title">
+          <%= @next_guide&.label %>
+        </span>
+      </a>
+    </li>
+  <% end %>
+</ul>

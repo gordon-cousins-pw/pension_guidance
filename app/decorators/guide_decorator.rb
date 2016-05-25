@@ -5,6 +5,7 @@ class GuideDecorator
     :concise_label,
     :description,
     :option?,
+    :pager?,
     :related_to_appointments?,
     :related_to_booking?,
     :==,

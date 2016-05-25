@@ -3,6 +3,7 @@ label: Mix your options
 description: You can mix your pension options to suit your circumstances at different times during retirement.
 tags:
   - option
+  - pager
 ---
 
 # Mix your pension options

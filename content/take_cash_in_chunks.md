@@ -2,6 +2,7 @@
 description: You can take smaller chunks of cash from your pension pot until it runs out.
 tags:
   - option
+  - pager
 ---
 
 # Take cash in chunks

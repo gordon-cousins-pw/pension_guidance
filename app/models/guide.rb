@@ -34,6 +34,10 @@ class Guide
     tagged_with?('option')
   end
 
+  def pager?
+    tagged_with?('pager')
+  end
+
   def related_to_appointments?
     tagged_with?('appointments')
   end

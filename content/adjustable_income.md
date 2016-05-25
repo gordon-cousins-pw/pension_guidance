@@ -3,6 +3,7 @@ label: Get an adjustable income
 description: Your money is invested in a flexi-access drawdown fund to give you a regular income with the option to take cash when you need to.
 tags:
   - option
+  - pager
 ---
 
 # Get an adjustable income
