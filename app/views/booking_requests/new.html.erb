@@ -1,6 +1,6 @@
 <% content_for :head do %>
-  <%= stylesheet_link_tag 'moj.date-slider', media: 'screen' %>
-  <%= stylesheet_link_tag 'moj.slot-picker', media: 'screen' %>
+  <%= stylesheet_link_tag 'moj.slot-picker/dist/stylesheets/moj.date-slider', media: 'screen' %>
+  <%= stylesheet_link_tag 'moj.slot-picker/dist/stylesheets/moj.slot-picker', media: 'screen' %>
 <% end %>
 
 <h1>Book an appointment</h1>
@@ -192,10 +192,10 @@
 
 <% content_for :after_script do %>
   <script>var moj = moj || { Modules: {}, Helpers: {} };</script>
-  <%= javascript_include_tag 'modernizr.custom.85598.js' %>
-  <%= javascript_include_tag 'handlebars' %>
-  <%= javascript_include_tag 'moj.date-slider' %>
-  <%= javascript_include_tag 'moj.slot-picker' %>
+  <%= javascript_include_tag 'moj.slot-picker/vendor/modernizr.custom.85598' %>
+  <%= javascript_include_tag 'handlebars/handlebars' %>
+  <%= javascript_include_tag 'moj.slot-picker/dist/javascripts/moj.date-slider' %>
+  <%= javascript_include_tag 'moj.slot-picker/dist/javascripts/moj.slot-picker' %>
 
   <script>
     Handlebars.registerHelper('ifCond', function(v1, v2, options) {
