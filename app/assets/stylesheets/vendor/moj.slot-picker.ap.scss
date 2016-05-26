@@ -28,7 +28,7 @@ table.BookingCalendar-dates {
   border-style: solid;
   border-color: #dee0e2;
   border-collapse: collapse;
-  background: #dee0e2 image-url("images/css/moj/unavailable_tile.png"); }
+  background: #dee0e2 image-url("/images/css/moj/unavailable_tile.png"); }
   table.BookingCalendar-dates th,
   table.BookingCalendar-dates td {
     width: 14.28571%; }
@@ -153,7 +153,7 @@ ul.BookingCalendar-legend {
       line-height: 1.14286; } }
 
 .BookingCalendar-legendBox--unavailable {
-  background: #dee0e2 image-url("images/css/moj/unavailable_tile.png"); }
+  background: #dee0e2 image-url("/images/css/moj/unavailable_tile.png"); }
 
 .BookingCalendar-header {
   position: relative;
@@ -208,7 +208,7 @@ a.BookingCalendar-nav--prev {
 a.BookingCalendar-nav--prev {
   margin-left: 10px;
   padding-left: 40px;
-  background-image: image-url("images/css/moj/prev.png"); }
+  background-image: image-url("/images/css/moj/prev.png"); }
   @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 20 / 10), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
     a.BookingCalendar-nav--prev {
       background-position: 0 10px;
@@ -219,7 +219,7 @@ a.BookingCalendar-nav--next {
   right: 0;
   margin-right: 10px;
   padding-right: 40px;
-  background-image: image-url("images/css/moj/next.png");
+  background-image: image-url("/images/css/moj/next.png");
   background-position: 100% -80px; }
   @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 20 / 10), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
     a.BookingCalendar-nav--next {
@@ -287,7 +287,7 @@ a.BookingCalendar-nav--next {
   font-size: 24px;
   line-height: 1.2em;
   border: 2px solid #bfc1c3;
-  background: white image-url("images/css/moj/tick_off.png") 7px 12px no-repeat; }
+  background: white image-url("/images/css/moj/tick_off.png") 7px 12px no-repeat; }
   @media (max-width: 640px) {
     .SlotPicker-label {
       width: 100%;
@@ -298,10 +298,10 @@ a.BookingCalendar-nav--next {
         border-color: #2b8cc4;
         background-color: #d5e8f3; } }
   .SlotPicker-label.is-active {
-    background-image: image-url("images/css/moj/tick_on.png"); }
+    background-image: image-url("/images/css/moj/tick_on.png"); }
   .SlotPicker-label.is-disabled {
     color: #bfc1c3;
-    background-image: image-url("images/css/moj/tick_disabled.png"); }
+    background-image: image-url("/images/css/moj/tick_disabled.png"); }
   .SlotPicker-label:last-child {
     margin-right: 0;
     margin-bottom: 0; }
@@ -423,8 +423,8 @@ a.BookingCalendar-nav--next {
       background-size: 100%; } }
 
 .SlotPicker-icon--remove {
-  background-image: image-url("images/css/moj/remove.png"); }
+  background-image: image-url("/images/css/moj/remove.png"); }
 
 .SlotPicker-icon--promote {
   right: 50px;
-  background-image: image-url("images/css/moj/promote.png"); }
+  background-image: image-url("/images/css/moj/promote.png"); }
