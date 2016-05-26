@@ -1,5 +1,5 @@
-@import 'moj.slot-picker/dist/stylesheets/moj.slot-picker.ap';
-@import 'moj.slot-picker/dist/stylesheets/moj.date-slider.ap';
+@import '../vendor/moj.slot-picker.ap.scss';
+@import '../vendor/moj.date-slider.ap.scss';
 
 // scss-lint:disable SelectorFormat
 .BookingCalendar-dates {
