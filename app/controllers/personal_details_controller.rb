@@ -9,8 +9,8 @@ class PersonalDetailsController < ApplicationController
     @booking_request = BookingRequest.find(params[:booking_request_id])
 
     if @booking_request.update(personal_details_params)
-      BookingRequestMailer.customer_confirmation(@booking_request).deliver
-      BookingRequestMailer.manager_confirmation.deliver
+      BookingRequestMailer.customer_confirmation(@booking_request).deliver_later
+      BookingRequestMailer.manager_confirmation.deliver_later
       redirect_to @booking_request
     else
       render :new
