@@ -4,7 +4,7 @@
   var delayedPopup = {
     trigger: '.js-calculator',
     triggered: false,
-    delay: 15000,
+    delay: 30000,
 
     init: function() {
       this._addListeners();
@@ -21,8 +21,8 @@
       var delay = this.delay;
       $('.js-delayed-popup').each(function(i, popup) {
         setTimeout(function() {
-          $(popup).slideDown();
-        }, delay)
+          $(popup).modal()
+        }, delay);
       });
     }
   };

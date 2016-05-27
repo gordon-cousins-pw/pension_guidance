@@ -26,4 +26,5 @@ Rails.application.config.assets.precompile += %w( apple-touch-icon-120x120.png
                                                   pensions-guidance.css
                                                   styleguide.css
                                                   bootstrap/js/affix.js
-                                                  bootstrap/js/scrollspy.js )
+                                                  bootstrap/js/scrollspy.js
+                                                  bootstrap/js/modal.js )

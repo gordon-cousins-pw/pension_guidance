@@ -72,6 +72,12 @@ Beware of [pension scams](/scams) contacting you unexpectedly about an investmen
 
 </div>
 
-{::delayed-popup delay="5"}
-Thought about booking a face-to-face appointment?
+{::delayed-popup class="modal-centered"}
+### Need more help with this?
+<p class="big-bottom">Get free guidance from one of our specialists</p>
+
+<a href="/appointments" class="button">Book a free appointment</a>
+
+<a href="#" data-dismiss="modal">No thanks</a>
+
 {/delayed-popup}
