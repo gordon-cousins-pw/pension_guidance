@@ -13,10 +13,12 @@
 
 .statistic__label {
   @extend .heading-small;
+  font-size: 16px;
   margin-top: 0;
 }
 
 .statistic__number {
   @extend .heading-xlarge;
+  font-size: 48px;
   margin-bottom: 0;
 }

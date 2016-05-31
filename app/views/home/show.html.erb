@@ -134,15 +134,19 @@
 <% content_for(:after_script) do %>
 <script>
   function isScrolledIntoView($elem) {
-      var $window = $(window);
+    var $window = $(window);
 
-      var docViewTop = $window.scrollTop();
-      var docViewBottom = docViewTop + $window.height();
+    var docViewTop = $window.scrollTop();
+    var docViewBottom = docViewTop + $window.height();
 
-      var elemTop = $elem.offset().top;
-      var elemBottom = elemTop + $elem.height();
+    var elemTop = $elem.offset().top;
+    var elemBottom = elemTop + $elem.height();
 
-      return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+    return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+  }
+
+  function numberWithCommas(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   }
 
   $('[data-counter]').each(function() {
@@ -159,11 +163,11 @@
 
       value += Math.ceil((target - value) / 30);
 
-      if (value >= (target - 5)) {
+      if (value >= (target - 2)) {
         value = target;
       }
 
-      $el.text(value);
+      $el.text(numberWithCommas(value));
 
       if (value < target) {
         setTimeout(bump, 10);
