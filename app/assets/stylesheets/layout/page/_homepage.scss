@@ -113,22 +113,42 @@
 
 .l-home-options__option--leave-pot-untouched {
   background: transparentize($color-option-leave-pot-untouched, .9);
+
+  &:hover {
+    background: transparentize($color-option-leave-pot-untouched, .7);
+  }
 }
 
 .l-home-options__option--guaranteed-income {
   background: transparentize($color-option-guaranteed-income, .9);
+
+  &:hover {
+    background: transparentize($color-option-guaranteed-income, .7);
+  }
 }
 
 .l-home-options__option--adjustable-income {
   background: transparentize($color-option-adjustable-income, .8);
+
+  &:hover {
+    background: transparentize($color-option-adjustable-income, .7);
+  }
 }
 
 .l-home-options__option--take-cash-in-chunks {
   background: transparentize($color-option-take-cash, .9);
+
+  &:hover {
+    background: transparentize($color-option-take-cash, .7);
+  }
 }
 
 .l-home-options__option--take-whole-pot {
   background: transparentize($color-option-take-whole-pot, .9);
+
+  &:hover {
+    background: transparentize($color-option-take-whole-pot, .7);
+  }
 }
 
 .l-quick-links {
