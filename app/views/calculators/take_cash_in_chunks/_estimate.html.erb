@@ -24,9 +24,9 @@
 <p>
   <label for="slider">or try a different cash chunk:</label>
   <%
-  max = estimate.chunk_remaining.to_f * 5
-  if max > estimate.pot.to_f
-    max = estimate.pot.to_i
+  max = estimate.chunk.to_f * 5
+  if max >= estimate.pot.to_f
+    max = estimate.pot.to_i - 1
   end
   %>
   <%= render 'components/slider', {
@@ -34,7 +34,7 @@
       target: '#chunk',
       option: 'take-cash',
       text_before: '£',
-      initial_value: estimate.chunk_remaining.to_f.ceil,
+      initial_value: estimate.chunk.to_f.ceil,
       min: 50,
       max: max,
       step: 5
