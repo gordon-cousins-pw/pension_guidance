@@ -52,13 +52,22 @@
   position: relative;
 }
 
+.l-home-retirement {
+  position: relative;
+  left: 96px;
+}
+
+.l-home-options {
+  padding-top: 0 !important;
+}
+
 .l-home-piggy-bank {
   display: none;
 
   @include media(tablet) {
     display: block;
     position: absolute;
-    top: -42px;
+    top: -37px;
   }
 }
 
