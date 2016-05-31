@@ -5,6 +5,7 @@ description: What to consider when working out how long your pension money will 
 # Increase your retirement income
 
 If you don’t think you’ll have enough money to last through your retirement you could increase it by:
+
 - paying more into your pot now
 - taking your pot later
 - delaying when you take the State Pension
