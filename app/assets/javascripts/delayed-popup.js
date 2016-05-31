@@ -4,7 +4,7 @@
   var delayedPopup = {
     trigger: '.js-calculator',
     triggered: false,
-    delay: 30000,
+    delay: 15000,
 
     init: function() {
       this._addListeners();
