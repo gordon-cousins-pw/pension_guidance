@@ -11,7 +11,7 @@ To work out if you’ll have enough money to live on in retirement, you’ll nee
 - work out the tax you’ll pay on your retirement income
 - think about how long your money will need to last
 
-^If you decide you won’t have enough to live on after you retire, you could look at ways to [increase your retirement income](making-money-last)^
+^If you decide you won’t have enough to live on after you retire, you could look at ways to [increase your retirement income](making-money-last).^
 
 ## Find out how much you'll need
 
@@ -20,8 +20,6 @@ Add up all the living costs you have now. You can use the [Money Advice Service�
 Take away these costs from your retirement income. This will give you an idea of whether you’ll have enough money through retirement.
 
 Your living costs may change when you retire. For example, you could spend less on travel or your mortgage but more on energy bills or [care costs](/care-costs).
-
-^Taking money from your pension pot can [affect your benefits](/benefits).^
 
 ## Work out how long it needs to last
 
