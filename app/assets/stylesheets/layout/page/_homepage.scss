@@ -61,8 +61,13 @@
   left: 96px;
 }
 
+.l-home-row-options {
+  padding-top: 0 !important;
+}
+
 .l-home-options {
   padding-top: 0 !important;
+  margin-top: 0 !important;
 }
 
 .l-home-piggy-bank {
@@ -116,18 +121,18 @@
 }
 
 .l-home-options__option--leave-pot-untouched {
-  background: transparentize($color-option-leave-pot-untouched, .9);
+  background: transparentize($color-option-leave-pot-untouched, .7);
 
   &:hover {
-    background: transparentize($color-option-leave-pot-untouched, .7);
+    background: transparentize($color-option-leave-pot-untouched, .8);
   }
 }
 
 .l-home-options__option--guaranteed-income {
-  background: transparentize($color-option-guaranteed-income, .9);
+  background: transparentize($color-option-guaranteed-income, .7);
 
   &:hover {
-    background: transparentize($color-option-guaranteed-income, .7);
+    background: transparentize($color-option-guaranteed-income, .8);
   }
 }
 
@@ -140,18 +145,18 @@
 }
 
 .l-home-options__option--take-cash-in-chunks {
-  background: transparentize($color-option-take-cash, .9);
+  background: transparentize($color-option-take-cash, .7);
 
   &:hover {
-    background: transparentize($color-option-take-cash, .7);
+    background: transparentize($color-option-take-cash, .8);
   }
 }
 
 .l-home-options__option--take-whole-pot {
-  background: transparentize($color-option-take-whole-pot, .9);
+  background: transparentize($color-option-take-whole-pot, .7);
 
   &:hover {
-    background: transparentize($color-option-take-whole-pot, .7);
+    background: transparentize($color-option-take-whole-pot, .8);
   }
 }
 
