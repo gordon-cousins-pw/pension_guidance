@@ -16,11 +16,7 @@
   <label class="SlotPicker-label" for="slot-{{ slot }}">
     <input class="SlotPicker-slot" type="checkbox" value="{{ slot }}" id="slot-{{ slot }}">
     <strong class="SlotPicker-time">
-    {{#ifCond time '8am'}}
-    Morning
-    {{else}}
-    Afternoon
-    {{/ifCond}}
+    {{ time }}
     </strong>
     <span class="SlotPicker-duration">45 mins</span>
   </label>
@@ -161,8 +157,12 @@
       slots = []
       (Date.today + 2.days..6.weeks.from_now).each do |date|
         unless date.saturday? || date.sunday?
-          slots << ["#{date.strftime('%A, %b %e')} – Morning", "#{date}-0800-1200"]
-          slots << ["#{date.strftime('%A, %b %e')} – Afternoon", "#{date}-1300-1700"]
+          slots << ["#{date.strftime('%A, %b %e')} – 9am", "#{date}-0900-1000"]
+          slots << ["#{date.strftime('%A, %b %e')} – 10am", "#{date}-1000-1100"]
+          slots << ["#{date.strftime('%A, %b %e')} – 11.30am", "#{date}-1130-1230"]
+          slots << ["#{date.strftime('%A, %b %e')} – 2pm", "#{date}-1400-1500"]
+          slots << ["#{date.strftime('%A, %b %e')} – 3pm", "#{date}-1500-1600"]
+          slots << ["#{date.strftime('%A, %b %e')} – 4.30pm", "#{date}-1630-1730"]
         end
       end
 
