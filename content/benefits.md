@@ -17,7 +17,7 @@ This might, for example, be income you get from an annuity, a tax-free lump sum,
 After you or your partner reach Pension Credit qualifying age any money you **take out of** or **leave in** your pot will be taken into account when your income is assessed. 
 
 $E
-**Example** You’re 67 and applying for Housing Benefit. You have a pension pot of £40,000 and have taken £10,000 tax-free cash from your pot. Your remaining pot is £30,000. Because you’re past Pension Credit qualifying age both amounts will count when you're assessed for benefits.
+**Example** You’re 67 and applying for Housing Benefit. You have a pension pot of £40,000 and have taken £10,000 tax-free cash from your pot. Your remaining pot is £30,000. Because you’re past Pension Credit qualifying age both amounts will count when you're assessed for benefits.a
 $E
 
 ###Leaving your pot untouched 
